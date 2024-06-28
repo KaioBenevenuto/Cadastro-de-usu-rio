@@ -1,0 +1,66 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:helvetica;
+}
+/*Plano de fundo*/
+body{
+  background-image: url(../assets/background.jpg);
+  background-size: cover;
+  color: aliceblue;
+}
+/*Container*/
+#container{
+  margin: 90px auto;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(4px);
+  width: 350px;
+  height: 400px;
+  padding:20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/*Título*/
+#title{
+  text-align: center;
+  font-size: 25px;
+  font-family:"DM Sans", sans-serif;
+}
+/*Barra de email/senha*/
+#emailRegistration, #senhaRegistration, #senhaConfirmRegistration{
+  width: 100%;
+  border: 1px;
+  border-radius: 5px;
+  padding: 4px;
+}
+#emailAndPasswordRegistration{
+  margin-top:40px;
+}
+#emailRegistration, #senhaRegistration{
+  margin-bottom: 25px;
+}
+/*Botões*/
+#buttons{
+  display: flex;
+  gap: 30px;
+  margin: 30px auto;
+}
+button{
+  border: 0px solid;
+  border-radius: 5px;
+  padding: 10px;
+  width: 126px;
+  color: aliceblue;
+  background-color:steelblue;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+  background-color: rgba(70, 131, 180, 0.705)
+}
