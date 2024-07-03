@@ -73,6 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("messageEmail").innerHTML = ""
     document.getElementById("messagePassword").innerHTML = ""
     if (registro.confirmSenha() && registro.confirmEmail()) {
+      localStorage.setItem("emailRegistration", emailRegistrationUpdate)
+      localStorage.setItem("senhaRegistration", senhaRegistrationUpdate)
       window.location.href = "login.html"
     }
   })

@@ -23,7 +23,7 @@ body{
   font-weight: bold;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 /*Título*/
 #title{
@@ -48,7 +48,7 @@ div #messageEmail{
   color: red;
   font-size: 12px;
   margin-top: -20px;
-  margin-bottom: 5px;
+  margin-bottom: 21px;
 }
 div #messagePassword{
   color: red;
@@ -62,6 +62,7 @@ div #messagePassword{
   margin: 30px auto;
 }
 button{
+  margin-top: 8px;
   border: 0px solid;
   border-radius: 5px;
   padding: 10px;
