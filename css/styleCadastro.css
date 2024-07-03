@@ -44,6 +44,17 @@ body{
 #emailRegistration, #senhaRegistration{
   margin-bottom: 25px;
 }
+div #messageEmail{
+  color: red;
+  font-size: 12px;
+  margin-top: -20px;
+  margin-bottom: 5px;
+}
+div #messagePassword{
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
 /*Botões*/
 #buttons{
   display: flex;

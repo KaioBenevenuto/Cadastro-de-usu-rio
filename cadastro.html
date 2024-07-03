@@ -15,20 +15,23 @@
         <div id="title">Cadastre-se</div>
 
         <div id="emailAndPasswordRegistration">
-            <label for="email" id="emailRegistration">Digite seu email</label>
+            <label for="email">Digite seu email</label>
             <input type="email" id="emailRegistration" name="email">
+            <div id="messageEmail"></div>
 
-            <label for="senha" id="senhaRegistration">Digite sua senha</label>
-            <input type="senha" id="senhaRegistration" name="senha">
+            <label for="senha">Digite sua senha</label>
+            <input type="password" id="senhaRegistration" name="senha">
 
-            <label for="senha" id="senhaConfirmRegistration">Confirme sua senha</label>
-            <input type="senha" id="senhaConfirmRegistration" name="senha">
+            <label for="senha">Confirme sua senha</label>
+            <input type="password" id="senhaConfirmRegistration" name="senha">
+            <div id="messagePassword"></div>
         </div>
 
         <div id="buttons">
           <button id="cadastrar">Finalizar cadastro</button>
-          <button>Voltar</button>
+          <button id="voltar">Voltar</button>
         </div>
     </div>
+    <script src="./js/scriptCadastro.js"></script>
 </body>
 </html>
