@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.getElementById("voltar").addEventListener("click", function () {
-    window.location.href = "login.html"
+    window.location.href = "index.html"
   })
 
   document.getElementById("cadastrar").addEventListener("click", function () {
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (registro.confirmSenha() && registro.confirmEmail()) {
       localStorage.setItem("emailRegistration", emailRegistrationUpdate)
       localStorage.setItem("senhaRegistration", senhaRegistrationUpdate)
-      window.location.href = "login.html"
+      window.location.href = "index.html"
     }
   })
 })

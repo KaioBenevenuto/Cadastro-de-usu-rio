@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
   document.getElementById("voltar").addEventListener("click", function () {
-    window.location.href = "login.html"
+    window.location.href = "index.html"
   })
 
   document.getElementById("enviar").addEventListener("click", function () {
