@@ -24,8 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (storedEmail === emailLoginUpdate && storedSenha === senhaLoginUpdate) {
       document.getElementById('container').style.display = 'none';
       document.getElementById("loading").style.display = "flex"
+
+      setTimeout(() => {
+        window.location.href = "https://kaiobenevenuto.github.io/Calculadora/"
+      }, 5000)
     } else{
-      alert("Email ou senha estão incorretos.")
+      alert("O email ou a senha está incorreta.")
     }
   })
 })
