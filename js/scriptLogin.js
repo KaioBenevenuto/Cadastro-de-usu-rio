@@ -5,9 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let emailLoginUpdate = ""
   let senhaLoginUpdate = ""
 
-  const storedEmail = localStorage.getItem("emailRegistration")
-  const storedSenha = localStorage.getItem("senhaRegistration")
-
   emailLogin.addEventListener("input", function (event) {
     emailLoginUpdate = event.target.value
   })
@@ -21,15 +18,26 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
   document.getElementById("login").addEventListener("click", function () {
-    if (storedEmail === emailLoginUpdate && storedSenha === senhaLoginUpdate) {
-      document.getElementById('container').style.display = 'none';
-      document.getElementById("loading").style.display = "flex"
+    fetch("http://localhost:8080/api/users/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: emailLoginUpdate,
+        password: senhaLoginUpdate,
+      }),
+    }).then((response) => {
+      if (response.ok) {
+        document.getElementById("container").style.display = "none"
+        document.getElementById("loading").style.display = "flex"
 
-      setTimeout(() => {
-        window.location.href = "https://kaiobenevenuto.github.io/Calculadora/"
-      }, 5000)
-    } else{
-      alert("O email ou a senha está incorreta.")
-    }
+        setTimeout(() => {
+          window.location.href = "https://kaiobenevenuto.github.io/Calculadora/"
+        }, 5000)
+      } else {
+        alert("O email ou a senha está incorreta.")
+      }
+    })
   })
 })

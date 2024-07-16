@@ -34,26 +34,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     confirmSenha() {
       if (this.senhaRegistration === this.senhaConfirmRegistration) {
-        if (this.senhaRegistration.length >= 10){
-          console.log("entrou no confirmSenha()")
+        if (this.senhaRegistration.length >= 10) {
           return true
         }
-        document.getElementById("messagePassword").innerHTML = '*A senha precisa ter no mínimo 10 caracteres/digitos'
-        console.log("não chegou no final confirmSenha()")
+        document.getElementById("messagePassword").innerHTML =
+          "*A senha precisa ter no mínimo 10 caracteres/digitos"
         return false
       }
-      console.log("não entrou no confirmSenha()")
-      alert('As senhas não condizem')
+      alert("As senhas não condizem")
       return false
     }
 
     confirmEmail() {
-      if (this.emailRegistration.includes('@')) {
-        console.log("entrou no confirmEmail()")
+      if (this.emailRegistration.includes("@")) {
         return true
       } else {
-        console.log("não entrou no confirmEmail()")
-        document.getElementById("messageEmail").innerHTML = '*O email precisa ter o "@"'
+        document.getElementById("messageEmail").innerHTML =
+          '*O email precisa ter o "@"'
         return false
       }
     }
@@ -73,9 +70,26 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("messageEmail").innerHTML = ""
     document.getElementById("messagePassword").innerHTML = ""
     if (registro.confirmSenha() && registro.confirmEmail()) {
-      localStorage.setItem("emailRegistration", emailRegistrationUpdate)
-      localStorage.setItem("senhaRegistration", senhaRegistrationUpdate)
-      window.location.href = "index.html"
+      fetch("http://localhost:8080/api/users/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: emailRegistrationUpdate,
+          password: senhaRegistrationUpdate,
+        }),
+      })
+        .then((response) => {
+          if (response.ok) {
+            window.location.href = "index.html"
+          } else {
+            alert("Falha no cadastro")
+          }
+        })
+        .catch((error) => {
+          console.error("Erro ao fazer a requisição:", error)
+        })
     }
   })
 })
