@@ -1,7 +1,7 @@
 <h1 align="center">Cadastro de usuário</h1>
 
 <p align="center">
-Esse projeto consiste em simular a experiência de se-cadastrar em um site e logar. Apesar dele já estar concluído pretendo modificar o modo como é guardado os dados cadastrados(que é por meio do cache), para que possa utilizar um banco de dados no lugar. Acesse o site por meio <a href='https://kaiobenevenuto.github.io/Cadastro-de-usuario/'>DESSE LINK</a> para ver como ficou.
+Esse projeto consiste em simular a experiência de se-cadastrar em um site e logar. O projeto utiliza uma API REST mas como github não tem suporte, para testa-lo é preciso instalar a pasta desse projeto, inicializar a API (seja manualmente ou utilizando uma IDE), e utilizar o live serve para abrir o 'index.html' no navegador.
 </p>
 
 ## 📱 Tecnologias
@@ -9,3 +9,4 @@ Esse projeto consiste em simular a experiência de se-cadastrar em um site e log
 - HTML
 - CSS
 - JS
+- SpringBoot
